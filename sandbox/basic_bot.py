@@ -1,3 +1,5 @@
+# Property of JargonBots
+# Written by Erik (Dan) Karlsson
 import os
 import random
 
