@@ -1,3 +1,6 @@
+# Property of JargonBots
+# Written by Armaan Kapoor on 12-26-2022
+
 from api_request_handler import openai_request
 
 
