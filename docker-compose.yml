@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  jargon-ai:
+    build:
+      context: .
+      dockerfile: ./docker/Dockerfile
+      args:
+        JARGON_APP: jargonai
+        JARGON_ENV: prod
+    env_file: ./config/.env

@@ -1,0 +1,37 @@
+{
+    "name": "jargonai",
+    "dockerComposeFile": [
+        "docker-compose.yml"
+    ],
+    "service": "ai",
+    "workspaceFolder": "/workspace",
+    "settings": {
+        "python.pythonPath": "/opt/pysetup/.venv/bin/python3",
+        "python.defaultInterpreterPath": "/opt/pysetup/.venv/bin/python3",
+        "python.formatting.provider": "black",
+        "python.linting.enabled": true,
+        "python.linting.lintOnSave": true,
+        "python.linting.flake8Enabled": true,
+        "python.linting.flake8Args": [
+            "--max-line-length=120",
+            "--extend-ignore=E203,E501,W503",
+            "--exclude=.venv"
+        ]
+    },
+    "extensions": [
+        "ms-python.python",
+        "tamasfe.even-better-toml",
+        "ms-python.vscode-pylance",
+        "ms-python.black-formatter",
+        "mikestead.dotenv",
+        "jeff-hykin.better-dockerfile-syntax",
+        "ms-vscode.makefile-tools",
+        "ms-python.isort"
+    ],
+    "remoteEnv": {
+        "JARGON_ENV": "dev",
+        "USERNAME": "jargon"
+    },
+    "postStartCommand": "poetry --directory /opt/pysetup shell",
+    "remoteUser": "jargon"
+}

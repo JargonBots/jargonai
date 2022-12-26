@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  ai:
+    build:
+      context: ..
+      dockerfile: ./docker/Dockerfile
+      target: development
+      args:
+        JARGON_APP: jargonai
+        JARGON_ENV: dev
+    env_file: ../config/.env
+    volumes:
+      - ..:/workspace:cached
+      - jargonai-bashhistory:/commandhistory
+    command: sleep infinity
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+volumes:
+  jargonai-bashhistory:
