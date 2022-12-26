@@ -1,3 +1,6 @@
+# Property of JargonBots.
+# Written by Armaan Kapoor on 12-22-2022
+
 import os
 from twilio.rest import Client
 
