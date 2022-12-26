@@ -1,3 +1,6 @@
+# Property of JargonBots.
+# Written by Armaan Kapoor on 12-22-2022.
+
 from http.server import HTTPServer, BaseHTTPRequestHandler
 
 class ChatHandler(BaseHTTPRequestHandler):
