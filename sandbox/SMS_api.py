@@ -1,5 +1,5 @@
 # Property of JargonBots.
-# Written by Erik (Dan) Karlsson on 12-25-2022.
+# Written by Armaan Kapoor on 12-22-2022.
 
 from flask import Flask, request
 from twilio.twiml.messaging_response import MessagingResponse
