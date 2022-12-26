@@ -1,4 +1,5 @@
-# BOT Example
+# Property of JargonBots.
+# Written by Erik (Dan) Karlsson on 12-25-2022.
 
 import os
 
