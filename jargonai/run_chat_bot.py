@@ -1,19 +1,20 @@
 # Property of JargonBots
 # Written by Armaan Kapoor on 12-26-2022
 
-from conversation import conversation
+from conversation import Conversation
 
 # Chat useage examwannple:
 
 
-Name = "Sherlock Holmes"
+Name = "Oprah"
 
-# cv = conversation("Rico Chen is from Millburn, he goes to Millburn HS is a junior. likes to lift weights, good student, interested in trading stocks and football. Close friends are Aryan and Armaan Kapoor, Chase, Carizzo, kishmeya. Currently rico made a bad decision and took alot of LSD, hes feeling trippy, but hes is alright. His friends want to get deep w him\nThe following is a conversation with {}.\n", "{}: ".format(Name))
-cv = conversation(
-    starting_environment="The following is a chat with {}.".format(Name), bot_name="{}: ".format(Name)
+cv = Conversation(
+    starting_environment="The following is a conversation with {}.\n".format(Name),
+    bot_name="{}: ".format(Name),
 )
 
 print("The following is a chat with {}".format(Name))
-cv.tick(50)
+cv.tick()
 
 # cv.user_append()
+cv.store_environment("chat_history_log1.txt")

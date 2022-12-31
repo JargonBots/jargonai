@@ -5,7 +5,7 @@ import os
 
 import openai
 
-openai.api_key = os.getenv("OPENAI_API_KEY")
+openai.api_key = os.environ["OPENAI_API_KEY"]
 
 
 class openai_request:
@@ -15,11 +15,11 @@ class openai_request:
     def __init__(self, prompt):
         self.prompt = prompt
 
-    def return_tokens(self, temprature, max_tokens, frequency_penalty, stop):
+    def return_tokens(self, temperature, max_tokens, frequency_penalty, stop):
         self.tokensout = openai.Completion.create(
             model="text-davinci-003",
             prompt=self.prompt,
-            temperature=temprature,
+            temperature=temperature,
             max_tokens=max_tokens,
             top_p=1.0,
             frequency_penalty=frequency_penalty,
